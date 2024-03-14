@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Room</title>
+</head>
+<body>
+    <h1>Welcome to the Esports Room</h1>
+    
+    <h2>User Registration</h2>
+    <form action="/register" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Register">
+    </form>
+    
+    <h2>User Login</h2>
+    <form action="/login" method="post">
+        <label for="student_id_login">Student ID:</label>
+        <input type="text" id="student_id_login" name="student_id_login" required><br>
+        <label for="password_login">Password:</label>
+        <input type="password" id="password_login" name="password_login" required><br>
+        <input type="submit" value="Log In">
+    </form>
+
+    <!-- Script for calculating session duration -->
+    <script>
+        function logOut() {
+            // Calculate session duration
+            // Send data to server for logging
+            alert("Session logged. Duration: [duration]");
+        }
+    </script>
+</body>
+</html>
