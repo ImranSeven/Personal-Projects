@@ -2,14 +2,14 @@ const lengthSlider = document.querySelector(".pass-length input");
 const options = document.querySelectorAll(".option input");
 const copyIcon = document.querySelector(".input-box span");
 const passwordInput = document.querySelector(".input-box input");
-const passwordIndicator = document.querySelector(".pass-indicator");
+const passIndicator = document.querySelector(".pass-indicator");
 const generateBtn = document.querySelector(".generate-btn");
 
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numbers: "0123456789",
-    symbols: "!$%&|[](){}:;.,*+-#@<>~",
+    symbols: "!$%&|[](){}:;.,*+-#@<>~"
 }
 
 const generatePassword = () => {
@@ -39,16 +39,17 @@ const generatePassword = () => {
         }
     }
     passwordInput.value = randomPassword;
+
 }
 
 const updatePassIndicator = () => {
-    passwordIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16? "medium" : "strong";
+    passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
 }
 
 const updateSlider = () => {
     document.querySelector(".pass-length span").innerText = lengthSlider.value;
-    generatePassword()
-    updatePassIndciator();
+    generatePassword();
+    updatePassIndicator();
 }
 updateSlider();
 
